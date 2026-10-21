@@ -74,7 +74,13 @@ class BotController:
     
     
     def start_bot(self, mode='farm'):
-        """Start automation only if no existing worker is alive."""
+         """
+        Start the automation loop in a separate thread.
+        Only start if no existing worker is alive.
+        
+        Args:
+            mode: 'farm' for harvesting loop, 'shop' for dedicated shop loop
+        """
 
         if self.worker_thread is not None and self.worker_thread.is_alive():
             self.gui.log(
