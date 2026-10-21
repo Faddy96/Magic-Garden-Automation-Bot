@@ -137,8 +137,12 @@ def move(direction, steps=1, logger=print):
     """
     Move in a given direction for a number of steps.
     Check inventory before moving to avoid skipping crops.
+    
+    Args:
+        direction: 'w', 'a', 's', or 'd'
+        steps: Number of steps to move
+        logger: Logging function
     """
-
     # Direction to position delta mapping
     DIRECTION_DELTA = {
         'w': ('row', -1),
