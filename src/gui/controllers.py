@@ -74,7 +74,7 @@ class BotController:
     
     
     def start_bot(self, mode='farm'):
-         """
+        """
         Start the automation loop in a separate thread.
         Only start if no existing worker is alive.
         
